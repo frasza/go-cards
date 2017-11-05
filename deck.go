@@ -43,13 +43,13 @@ func Deal(d Deck, handSize int) (Deck, Deck) {
 }
 
 // ToString converts deck to string
-func (d Deck) ToString() string {
+func (d Deck) toString() string {
 	return strings.Join([]string(d), ",")
 }
 
 // SaveToFile saves deck to file
 func (d Deck) SaveToFile(filename string) error {
-	return ioutil.WriteFile(filename, []byte(d.ToString()), 0666)
+	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
 }
 
 // NewDeckFromFile reads deck from file
